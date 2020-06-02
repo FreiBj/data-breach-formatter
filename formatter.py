@@ -1,24 +1,3 @@
-# with open("test.txt", "r") as myfile:
-#     text=myfile.read()
-
-# output_text = text.split(" ")
-
-# with open("Output.txt", "w",) as outfile:
-#     for line in output_text:
-#         outfile.write('"'+ line + '"')
-
-# s = "username:password"
-# s2 ="wolfdo65gtornado:salmontiger223"
-# result = "".join(itertools.takewhile(lambda x : x!=':' , s))
-# result2 = "".join(itertools.takewhile(lambda y : y=="!", s2))
-
-# text ="username:password"
-# left_text = text.partition(":")[0]
-
-# left_text = None
-
-# print(left_text)
-
 import itertools
 import sys
 import os
@@ -50,24 +29,7 @@ with open(args.file, 'r+') as f:
         
         format = '"' + username + '"' + semicolon + '"' + password + '"'
         outputFile.write(format + "\n")
-        print(format)
         
-        # f.write(format + "\n")
         line = f.readline().splitlines()
-        
-        # print(format, end='')
-        # f.write(format)
      
     f.close()
-    # while line != '':  # The EOF char is an empty string
-    #     # line.split(':')
-    #     # print(line.split(':'), end='"')
-    #     # line = reader.readline()
-        
-        
-    #     # format = '"' + username + '"' + semicolon + '"' + password + '"'
-    #     print(x)
-    #     print(format, end="")
-    #     line = f.readline()
-    
-# function
