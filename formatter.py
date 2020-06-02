@@ -29,11 +29,11 @@ import argparse
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--file", "-f", type=str, required=True)
-parser.add_argument("--outputFile", "-oF", type=str, required=True)
+parser.add_argument("--outputFile", "-o", type=str, required=True)
 args = parser.parse_args()
 
 # Opens a output file
-outF = open(args.outputFile, "w")
+outputFile = open(args.outputFile, "w")
 
 
 with open(args.file, 'r+') as f:
@@ -49,7 +49,7 @@ with open(args.file, 'r+') as f:
         password = line.partition(":")[2]
         
         format = '"' + username + '"' + semicolon + '"' + password + '"'
-        outF.write(format + "\n")
+        outputFile.write(format + "\n")
         print(format)
         
         # f.write(format + "\n")
